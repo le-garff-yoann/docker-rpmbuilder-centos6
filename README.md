@@ -8,7 +8,6 @@ It includes *rpmdevtools*'s tools.
 
 ```bash
 docker run --rm \
-    -v /path/to/your/rpmbuild:/root/rpmbuild:Z \
-    rpmbuilder-centos6 \
-    /root/rpmbuild/SPECS/my-spec.spec
+    -v /path/to/your/rpmbuild:/home/rpmbuilder/rpmbuild:z \
+    rpmbuilder-centos6 -bb /home/rpmbuilder/rpmbuild/SPECS/my-spec.spec
 ```
